@@ -3,20 +3,20 @@
 using namespace std;
 
 int cini() {
-    int checkpass = 0;
+    bool checkpass = false;
 
     string userInput;
     int sanitizedInput;
 
-    while (checkpass == 0) {
+    while (checkpass == false) {
         getline(cin, userInput);
-        checkpass = 1;
+        checkpass = true;
 
         try {
             sanitizedInput = stoi(userInput);
         }
         catch (const invalid_argument&) {
-            checkpass = 0;
+            checkpass = false;
             cout << "\n"
                 << "Invalid entry, please try again:"
                 << " ";
@@ -26,20 +26,20 @@ int cini() {
 }
 
 float cinf() {
-    float checkpass = 0;
+    bool checkpass = false;
 
     string userInput;
     float sanitizedInput;
 
-    while (checkpass == 0) {
+    while (checkpass == false) {
         getline(cin, userInput);
-        checkpass = 1;
+        checkpass = true;
 
         try {
             sanitizedInput = stof(userInput);
         }
         catch (const invalid_argument&) {
-            checkpass = 0;
+            checkpass = false;
             cout << "\n"
                 << "Invalid entry, please try again:"
                 << " ";
@@ -49,20 +49,20 @@ float cinf() {
 }
 
 double cind() {
-    double checkpass = 0;
+    bool checkpass = false;
 
     string userInput;
     double sanitizedInput;
 
-    while (checkpass == 0) {
+    while (checkpass == false) {
         getline(cin, userInput);
-        checkpass = 1;
+        checkpass = true;
 
         try {
             sanitizedInput = stod(userInput);
         }
         catch (const invalid_argument&) {
-            checkpass = 0;
+            checkpass = false;
             cout << "\n"
                 << "Invalid entry, please try again:"
                 << " ";
