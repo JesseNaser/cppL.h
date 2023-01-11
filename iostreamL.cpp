@@ -3,70 +3,67 @@
 using namespace std;
 
 int cini() {
-    bool checkpass = false;
+  bool checkpass;
 
-    string userInput;
-    int sanitizedInput;
+  string userInput;
+  int sanitizedInput;
 
-    while (checkpass == false) {
-        getline(cin, userInput);
-        checkpass = true;
+  do {
+    getline(cin, userInput);
+    checkpass = true;
 
-        try {
-            sanitizedInput = stoi(userInput);
-        }
-        catch (const invalid_argument&) {
-            checkpass = false;
-            cout << "\n"
-                << "Invalid entry, please try again:"
-                << " ";
-        }
+    try {
+      sanitizedInput = stoi(userInput);
+    } catch (const invalid_argument&) {
+      checkpass = false;
+      cout << "\n"
+           << "Invalid entry, please try again:"
+           << " ";
     }
-    return sanitizedInput;
+  } while (checkpass == false);
+  return sanitizedInput;
 }
 
 float cinf() {
-    bool checkpass = false;
+  bool checkpass;
 
-    string userInput;
-    float sanitizedInput;
+  string userInput;
+  float sanitizedInput;
 
-    while (checkpass == false) {
-        getline(cin, userInput);
-        checkpass = true;
+  do {
+    getline(cin, userInput);
+    checkpass = true;
 
-        try {
-            sanitizedInput = stof(userInput);
-        }
-        catch (const invalid_argument&) {
-            checkpass = false;
-            cout << "\n"
-                << "Invalid entry, please try again:"
-                << " ";
-        }
+    try {
+      sanitizedInput = stof(userInput);
+    } catch (const invalid_argument&) {
+      checkpass = false;
+      cout << "\n"
+           << "Invalid entry, please try again:"
+           << " ";
     }
-    return sanitizedInput;
+  } while (checkpass == false);
+  return sanitizedInput;
 }
 
 double cind() {
-    bool checkpass = false;
+  bool checkpass;
 
-    string userInput;
-    double sanitizedInput;
+  string userInput;
+  double sanitizedInput;
 
-    while (checkpass == false) {
-        getline(cin, userInput);
-        checkpass = true;
+  do {
+    getline(cin, userInput);
+    checkpass = true;
 
-        try {
-            sanitizedInput = stod(userInput);
-        }
-        catch (const invalid_argument&) {
-            checkpass = false;
-            cout << "\n"
-                << "Invalid entry, please try again:"
-                << " ";
-        }
+    try {
+      sanitizedInput = stod(userInput);
+    } catch (const invalid_argument&) {
+      checkpass = false;
+      cout << "\n"
+           << "Invalid entry, please try again:"
+           << " ";
     }
-    return sanitizedInput;
+  } while (checkpass == false);
+  return sanitizedInput;
 }

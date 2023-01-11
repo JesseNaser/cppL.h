@@ -3,7 +3,7 @@ What C++ should have in the standard library.
 
 ---
 
-Version 1.3
+Version 1.4
 - iostreamL.h: Only accept numerical types from user input prompts.
 	- Features:
 		- cini(): cin with only integer inputs.
@@ -13,7 +13,7 @@ Version 1.3
 		- Speed optimization.
 		- Unused variables removed.
 		- Data type size minimized.
-
+		- Execution order optimized.
 
 ---
 
