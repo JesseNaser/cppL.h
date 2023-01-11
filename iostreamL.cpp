@@ -1,10 +1,8 @@
-#include <iostream>
-#include <string>
-#include "NumericalValidation.h"
+#include "iostreamL.h"
 
 using namespace std;
 
-int nvInteger() {
+int cini() {
     int checkpass = 0;
     int checkpoint;
 
@@ -35,7 +33,7 @@ int nvInteger() {
     return sanitizedInput;
 }
 
-float nvFloat() {
+float cinf() {
     float checkpass = 0;
     float checkpoint;
 
@@ -66,7 +64,7 @@ float nvFloat() {
     return sanitizedInput;
 }
 
-double nvDouble() {
+double cind() {
     double checkpass = 0;
     double checkpoint;
 
