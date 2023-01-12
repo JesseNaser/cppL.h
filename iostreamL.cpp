@@ -1,8 +1,9 @@
+#include <iostream>
 #include "iostreamL.h"
 
 using namespace std;
 
-int cini() {
+int cini(string repeatedPrompt) {
   bool checkpass;
 
   string userInput;
@@ -16,15 +17,13 @@ int cini() {
       sanitizedInput = stoi(userInput);
     } catch (const invalid_argument&) {
       checkpass = false;
-      cout << "\n"
-           << "Invalid entry, please try again:"
-           << " ";
+      cout << repeatedPrompt;
     }
   } while (checkpass == false);
   return sanitizedInput;
 }
 
-float cinf() {
+float cinf(string repeatedPrompt) {
   bool checkpass;
 
   string userInput;
@@ -38,15 +37,13 @@ float cinf() {
       sanitizedInput = stof(userInput);
     } catch (const invalid_argument&) {
       checkpass = false;
-      cout << "\n"
-           << "Invalid entry, please try again:"
-           << " ";
+      cout << repeatedPrompt;
     }
   } while (checkpass == false);
   return sanitizedInput;
 }
 
-double cind() {
+double cind(string repeatedPrompt) {
   bool checkpass;
 
   string userInput;
@@ -60,9 +57,7 @@ double cind() {
       sanitizedInput = stod(userInput);
     } catch (const invalid_argument&) {
       checkpass = false;
-      cout << "\n"
-           << "Invalid entry, please try again:"
-           << " ";
+      cout << repeatedPrompt;
     }
   } while (checkpass == false);
   return sanitizedInput;
